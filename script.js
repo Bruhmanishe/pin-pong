@@ -127,6 +127,7 @@ function checkingColls() {
       ballY - ballRadius < firstPlayer.y + firstPlayer.height
     ) {
       ballXDir *= -1;
+      ballSpeed += 0.01;
     }
   } else if (ballX - ballRadius >= secondPlayer.x - secondPlayer.width) {
     if (
@@ -134,6 +135,7 @@ function checkingColls() {
       ballY + ballRadius < secondPlayer.y + secondPlayer.height
     ) {
       ballXDir *= -1;
+      ballSpeed += 0.01;
     }
   }
 
@@ -156,6 +158,7 @@ btnUp.addEventListener("click", movePlayer);
 function respawnBall() {
   ballX = gameWidth / 2;
   ballY = gameHeight / 2;
+  ballSpeed = 0.5;
 }
 
 function updateScore() {
