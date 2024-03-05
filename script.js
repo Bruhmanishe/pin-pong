@@ -127,7 +127,7 @@ function checkingColls() {
       ballY - ballRadius < firstPlayer.y + firstPlayer.height
     ) {
       ballXDir *= -1;
-      if(ballSpeed > 3){
+      if(ballSpeed > 1.5){
       ballSpeed += 0.01;
       }
     }
@@ -137,7 +137,7 @@ function checkingColls() {
       ballY + ballRadius < secondPlayer.y + secondPlayer.height
     ) {
       ballXDir *= -1;
-      if(ballSpeed > 3){
+      if(ballSpeed > 1.5){
       ballSpeed += 0.01;
       }
     }
@@ -176,7 +176,7 @@ function updateScore() {
 }
 
 function secondPlayerMove() {
-  setTimeout(move, 200);
+  setTimeout(move, 100);
   function move() {
     if (ballY > secondPlayer.y + secondPlayer.height / 2) {
       secondPlayer.y += playerSpeed;
