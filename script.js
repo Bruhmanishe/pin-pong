@@ -169,7 +169,7 @@ function updateScore() {
 }
 
 function secondPlayerMove() {
-  setTimeout(move, 200);
+  setTimeout(move, 300);
   function move() {
     if (ballY > secondPlayer.y + secondPlayer.height / 2) {
       secondPlayer.y += playerSpeed;
